@@ -30,8 +30,26 @@ int main()
       break;
     case 'c':
       puts("You selected chars:");
-      for (char c = 'a'; c < 'd'; c++)
-	print_char_5x7(c);
+      puts("How would you like to print your characters?");
+      puts("Normal = n, Sideways = s");
+      int p;
+      while ((p = getchar()) == '\n');
+      if(c == EOF)
+	goto done;
+
+      if(p == 'n'){
+	printf("You selected normal:");
+	for (char c = 'a'; c < 'd'; c++)
+	  print_char_up_5x7(c);
+      }
+      else if(p == 's'){
+	printf("You selected sideways:");
+	for (char c = 'a'; c < 'd'; c++)
+	  print_char_5x7(c);
+      }
+      else{
+	printf("Unrecognized option '%c', going back to the main menu...\n", c);
+      }
       break;
     case 'q':
       puts("Bye!");
