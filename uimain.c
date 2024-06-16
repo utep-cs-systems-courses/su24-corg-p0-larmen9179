@@ -40,12 +40,12 @@ int main()
       if(p == 'n'){
 	printf("You selected normal:");
 	for (char c = 'a'; c < 'd'; c++)
-	  print_char_up_5x7(c);
+	  print_char_up_11x16(c);
       }
       else if(p == 's'){
 	printf("You selected sideways:");
 	for (char c = 'a'; c < 'd'; c++)
-	  print_char_5x7(c);
+	  print_char_11x16(c);
       }
       else{
 	printf("Unrecognized option '%c', going back to the main menu...\n", c);
